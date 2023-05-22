@@ -13,5 +13,9 @@ fn main() {
         stdin.read_line(&mut input).unwrap();
 
         let input: &str = input.trim();
+
+        if input == "exit" {
+            break;
+        }
     }
 }
