@@ -9,9 +9,15 @@ use std::env;
 use std::io;
 
 #[derive(Serialize, Deserialize)]
-struct Prompt {
-    prompt: String,
-    max_tokens: u32,
+struct Message {
+    role: String,
+    content: String,
+}
+
+#[derive(Serialize, Deserialize)]
+struct ChatCompletion {
+    model: String,
+    messages: Vec<Message>,
 }
 
 #[tokio::main]
@@ -21,13 +27,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let api_key: String = env::var("OPENAI_KEY").expect("OPENAI_KEY must be set");
     let stdin: io::Stdin = io::stdin();
     let mut message: String = String::new();
-    println!("Ask something to Chat GPT");
-    stdin
-        .read_line(&mut message)
-        .expect("Cannot read this line!");
-    let prompt: Prompt = Prompt {
-        prompt: format!("'{}'", message),
-        max_tokens: 60,
+    let chat = ChatCompletion {
+        model: "gpt-3.5-turbo".to_string(),
+        messages: vec![Message {
+            role: "user".to_string(),
+            content: "Háblame sobre los agujeros negros".to_string(),
+        }],
     };
 
     let client: Client = Client::new();
@@ -39,14 +44,14 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     headers.insert(CONTENT_TYPE, HeaderValue::from_static("application/json"));
 
     let res: reqwest::Response = client
-        .post("https://api.openai.com/v1/engines/text-davinci-002/completions")
+        .post("https://api.openai.com/v1/chat/completions")
         .headers(headers)
-        .json(&prompt)
+        .json(&chat)
         .send()
         .await?;
 
     let response_text: serde_json::Value = res.json().await?;
-    if let Some(text) = response_text["choices"][0]["text"].as_str() {
+    if let Some(text) = response_text["choices"][0]["message"]["content"].as_str() {
         println!("{}", text);
     }
 
