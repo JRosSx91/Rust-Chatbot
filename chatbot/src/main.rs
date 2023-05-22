@@ -14,7 +14,7 @@ fn main() {
 
         let input: &str = input.trim();
 
-        if input == "exit" {
+        if input.to_lowercase() == "exit" {
             break;
         }
     }
