@@ -1,9 +1,18 @@
-extern crate dotenv;
+#[macro_use]
+extern crate serde_derive;
+extern crate serde_json;
 
-use dotenv::dotenv;
-use reqwest;
-use serde_json::json;
 use std::env;
+use dotenv::dotenv;
+use reqwest::header::{HeaderMap, HeaderValue, CONTENT_TYPE};
+use reqwest::Client;
+use std::error::Error;
+
+#[derive(Serialize, Deserialize)]
+struct Prompt {
+    prompt: String,
+    max_tokens: u32,
+}
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -26,7 +35,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Send the request
     let res = client
-        .post("https://api.openai.com/v1/engines/davinci-codex/completions")
+        .post("https://api.openai.com/v1/engines/text-davinci-002/completions")
         .header("Authorization", format!("Bearer {}", api_key))
         .json(&body)
         .send()
