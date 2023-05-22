@@ -1,0 +1,10 @@
+C:\Users\Ivan\labs\rust\Rust-Chatbot\chatbot\target\debug\deps\tokio_tungstenite-4a69764a3084658e.rmeta: C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\lib.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\compat.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\connect.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\handshake.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\stream.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\tls.rs
+
+C:\Users\Ivan\labs\rust\Rust-Chatbot\chatbot\target\debug\deps\tokio_tungstenite-4a69764a3084658e.d: C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\lib.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\compat.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\connect.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\handshake.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\stream.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\tls.rs
+
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\lib.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\compat.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\connect.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\handshake.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\stream.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\tokio-tungstenite-0.17.2\src\tls.rs:

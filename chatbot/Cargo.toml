@@ -12,3 +12,4 @@ serde = "1.0"
 reqwest = { version = "0.11", features = ["json"] }
 dotenv = "0.15.0"
 serde_derive = "1.0"
+rust_socketio = "0.4.1"

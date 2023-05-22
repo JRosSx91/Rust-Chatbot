@@ -1,0 +1,11 @@
+C:\Users\Ivan\labs\rust\Rust-Chatbot\chatbot\target\debug\deps\digest-e76ce93d6a330c38.rmeta: C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\lib.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\ct_variable.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\rt_variable.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\wrapper.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\xof_reader.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\digest.rs
+
+C:\Users\Ivan\labs\rust\Rust-Chatbot\chatbot\target\debug\deps\digest-e76ce93d6a330c38.d: C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\lib.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\ct_variable.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\rt_variable.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\wrapper.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\xof_reader.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\digest.rs
+
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\lib.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\ct_variable.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\rt_variable.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\wrapper.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\core_api\xof_reader.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\digest-0.10.7\src\digest.rs:
