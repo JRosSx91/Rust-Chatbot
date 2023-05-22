@@ -56,6 +56,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     if let Some(text) = response_text["choices"][0]["message"]["content"].as_str() {
         println!("{}", text);
     }
+    println!("\nPress Enter to exit...");
+
+    let mut _temp = String::new();
+    io::stdin().read_line(&mut _temp).expect("Failed to read");
 
     Ok(())
 }
