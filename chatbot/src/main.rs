@@ -37,7 +37,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         // Get user input
         print!("Enter your message (type 'exit' to quit): ");
         io::stdout().flush()?; // flush it to the screen
-        let mut user_message = String::new();
+        let mut user_message: String = String::new();
         io::stdin().read_line(&mut user_message)?;
         user_message = user_message.trim().to_string();
 
@@ -46,7 +46,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             break;
         }
 
-        let chat = ChatCompletion {
+        let chat: ChatCompletion = ChatCompletion {
             model: "gpt-3.5-turbo".to_string(),
             messages: vec![Message {
                 role: "user".to_string(),
@@ -54,7 +54,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             }],
         };
 
-        let res = client
+        let res: reqwest::Response = client
             .post("https://api.openai.com/v1/chat/completions")
             .headers(headers.clone())
             .json(&chat)
