@@ -23,14 +23,13 @@ struct ChatCompletion {
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv().ok();
-    // Get the API key from an environment variable
     let api_key: String = env::var("OPENAI_KEY").expect("OPENAI_KEY must be set");
     println!("Enter your message: ");
-    io::stdout().flush()?; // flush it to the screen
-    let mut user_message = String::new();
+    io::stdout().flush()?;
+    let mut user_message: String = String::new();
     io::stdin().read_line(&mut user_message)?;
     user_message = user_message.trim().to_string();
-    let chat = ChatCompletion {
+    let chat: ChatCompletion = ChatCompletion {
         model: "gpt-3.5-turbo".to_string(),
         messages: vec![Message {
             role: "user".to_string(),
