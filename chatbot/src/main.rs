@@ -6,7 +6,7 @@ use dotenv::dotenv;
 use reqwest::header::{HeaderMap, HeaderValue, CONTENT_TYPE};
 use reqwest::Client;
 use std::env;
-use std::io;
+use std::io::{self, Write};
 
 #[derive(Serialize, Deserialize)]
 struct Message {
@@ -25,13 +25,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv().ok();
     // Get the API key from an environment variable
     let api_key: String = env::var("OPENAI_KEY").expect("OPENAI_KEY must be set");
-    let stdin: io::Stdin = io::stdin();
-    let mut message: String = String::new();
+    println!("Enter your message: ");
+    io::stdout().flush()?; // flush it to the screen
+    let mut user_message = String::new();
+    io::stdin().read_line(&mut user_message)?;
+    user_message = user_message.trim().to_string();
     let chat = ChatCompletion {
         model: "gpt-3.5-turbo".to_string(),
         messages: vec![Message {
             role: "user".to_string(),
-            content: "Háblame sobre los agujeros negros".to_string(),
+            content: user_message,
         }],
     };
 
