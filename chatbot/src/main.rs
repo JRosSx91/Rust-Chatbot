@@ -1,10 +1,13 @@
+extern crate dotenv;
+
+use dotenv::dotenv;
 use reqwest;
 use serde_json::json;
 use std::env;
-use std::io::{self, Write};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    dotenv().ok();
     // Get the API key from an environment variable
     let api_key = env::var("OPENAI_KEY").expect("OPENAI_KEY must be set");
 
