@@ -6,6 +6,7 @@ use dotenv::dotenv;
 use reqwest::header::{HeaderMap, HeaderValue, CONTENT_TYPE};
 use reqwest::Client;
 use std::env;
+use std::io;
 
 #[derive(Serialize, Deserialize)]
 struct Prompt {
@@ -17,25 +18,27 @@ struct Prompt {
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv().ok();
     // Get the API key from an environment variable
-    let api_key = env::var("OPENAI_KEY").expect("OPENAI_KEY must be set");
-    let message = "Hello, world!";
-    let prompt = Prompt {
-        prompt: format!(
-            "Translate the following English text to French: '{}'",
-            message
-        ),
+    let api_key: String = env::var("OPENAI_KEY").expect("OPENAI_KEY must be set");
+    let stdin: io::Stdin = io::stdin();
+    let mut message: String = String::new();
+    println!("Ask something to Chat GPT");
+    stdin
+        .read_line(&mut message)
+        .expect("Cannot read this line!");
+    let prompt: Prompt = Prompt {
+        prompt: format!("'{}'", message),
         max_tokens: 60,
     };
 
-    let client = Client::new();
-    let mut headers = HeaderMap::new();
+    let client: Client = Client::new();
+    let mut headers: HeaderMap = HeaderMap::new();
     headers.insert(
         "Authorization",
         HeaderValue::from_str(&format!("Bearer {}", api_key))?,
     );
     headers.insert(CONTENT_TYPE, HeaderValue::from_static("application/json"));
 
-    let res = client
+    let res: reqwest::Response = client
         .post("https://api.openai.com/v1/engines/text-davinci-002/completions")
         .headers(headers)
         .json(&prompt)
