@@ -24,18 +24,6 @@ struct ChatCompletion {
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv().ok();
     let api_key: String = env::var("OPENAI_KEY").expect("OPENAI_KEY must be set");
-    println!("Enter your message: ");
-    io::stdout().flush()?;
-    let mut user_message: String = String::new();
-    io::stdin().read_line(&mut user_message)?;
-    user_message = user_message.trim().to_string();
-    let chat: ChatCompletion = ChatCompletion {
-        model: "gpt-3.5-turbo".to_string(),
-        messages: vec![Message {
-            role: "user".to_string(),
-            content: user_message,
-        }],
-    };
 
     let client: Client = Client::new();
     let mut headers: HeaderMap = HeaderMap::new();
@@ -45,21 +33,40 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     );
     headers.insert(CONTENT_TYPE, HeaderValue::from_static("application/json"));
 
-    let res: reqwest::Response = client
-        .post("https://api.openai.com/v1/chat/completions")
-        .headers(headers)
-        .json(&chat)
-        .send()
-        .await?;
+    loop {
+        // Get user input
+        print!("Enter your message (type 'exit' to quit): ");
+        io::stdout().flush()?; // flush it to the screen
+        let mut user_message = String::new();
+        io::stdin().read_line(&mut user_message)?;
+        user_message = user_message.trim().to_string();
 
-    let response_text: serde_json::Value = res.json().await?;
-    if let Some(text) = response_text["choices"][0]["message"]["content"].as_str() {
-        println!("{}", text);
+        // Break the loop if the user wants to exit
+        if user_message == "exit" {
+            break;
+        }
+
+        let chat = ChatCompletion {
+            model: "gpt-3.5-turbo".to_string(),
+            messages: vec![Message {
+                role: "user".to_string(),
+                content: user_message,
+            }],
+        };
+
+        let res = client
+            .post("https://api.openai.com/v1/chat/completions")
+            .headers(headers.clone())
+            .json(&chat)
+            .send()
+            .await?;
+
+        let response_text: serde_json::Value = res.json().await?;
+        // Accessing the generated text
+        if let Some(text) = response_text["choices"][0]["message"]["content"].as_str() {
+            println!("GPT-3 Response: {}", text);
+        }
     }
-    println!("\nPress Enter to exit...");
-
-    let mut _temp = String::new();
-    io::stdin().read_line(&mut _temp).expect("Failed to read");
 
     Ok(())
 }
