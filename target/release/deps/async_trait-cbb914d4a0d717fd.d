@@ -1,0 +1,12 @@
+C:\Users\Ivan\labs\rust\Rust-Chatbot\chatbot\target\release\deps\async_trait-cbb914d4a0d717fd.dll: C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\lib.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\args.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\bound.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\expand.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\lifetime.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\parse.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\receiver.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\verbatim.rs
+
+C:\Users\Ivan\labs\rust\Rust-Chatbot\chatbot\target\release\deps\async_trait-cbb914d4a0d717fd.d: C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\lib.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\args.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\bound.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\expand.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\lifetime.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\parse.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\receiver.rs C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\verbatim.rs
+
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\lib.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\args.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\bound.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\expand.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\lifetime.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\parse.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\receiver.rs:
+C:\Users\Ivan\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.68\src\verbatim.rs:
